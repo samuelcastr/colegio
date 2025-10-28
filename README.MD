@@ -1,3 +1,12 @@
+## 📂 Estructura del Proyecto
+
+La estructura del proyecto está organizada de la siguiente manera para facilitar el desarrollo y mantenimiento del sistema de gestión escolar:
+
+> [!IMPORTANT]
+> esto es provicional
+
+
+```plaintext
 colegio-sistema/
 ├─ src/
 │  ├─ main.py                     # Punto de entrada con menú o CLI
