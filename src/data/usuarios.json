@@ -1,0 +1,12 @@
+[
+  {
+    "rol": "rector",
+    "usuario": "admin",
+    "contraseña": "1234"
+  },
+  {
+    "rol": "coordinador",
+    "usuario": "coor1",
+    "contraseña": "abcd"
+  }
+]
