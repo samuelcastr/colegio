@@ -1,4 +1,4 @@
-## 📂 Estructura del Proyecto
+## 📂 Estructura del Proyecto.
 
 La estructura del proyecto está organizada de la siguiente manera para facilitar el desarrollo y mantenimiento del sistema de gestión escolar:
 
