@@ -13,5 +13,11 @@
     "rol": "profesor",
     "usuario": "prof1",
     "contraseña": "p201"
+  },
+  {
+    "rol": "estudiante",
+    "usuario": "estu1",
+    "contraseña": "e123"
   }
 ]
+

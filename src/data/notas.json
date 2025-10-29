@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": 1,
+    "id_estudiante": 1,
+    "nombre_estudiante": "andres",
+    "materia": "ingles",
+    "nota": 5.0,
+    "fecha": "2025-10-29"
+  }
+]

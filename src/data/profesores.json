@@ -3,5 +3,10 @@
     "id": 1,
     "nombre": "juan",
     "materia": "matematicas"
+  },
+  {
+    "id": 2,
+    "nombre": "marta",
+    "materia": "ingles"
   }
 ]

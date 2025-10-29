@@ -3,6 +3,7 @@ from src.modules.data_manager import load_json
 from src.roles.rector import menu_rector
 from src.roles.coordinador import menu_coordinador
 from src.roles.profesor import menu_profesor
+from src.roles.estudiante import menu_estudiante
 
 USUARIOS_PATH = "src/data/usuarios.json"
 
@@ -50,6 +51,8 @@ def main():
             menu_coordinador()
         elif rol == "profesor":
             menu_profesor()
+        elif rol == "estudiante":
+            menu_estudiante()  
         else:
             print(f"⚠️ Rol '{rol}' no tiene menú asignado todavía.\n")
 

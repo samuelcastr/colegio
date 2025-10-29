@@ -49,7 +49,6 @@ def registrar_nota():
     save_json(NOTAS_FILE, notas)
     print(f" ✅ Nota registrada correctamente para {estudiante['nombre']}.\n")
 
-
 def ver_notas():
     notas = load_json(NOTAS_FILE)
     if not notas:
