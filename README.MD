@@ -35,7 +35,7 @@ colegio-sistema/
 └─ .gitignore
 
 
----
+```
 
 ## ⚙️ Funcionalidades
 
@@ -105,34 +105,81 @@ colegio-sistema/
 ```bash
 python src/main.py
 Se presentará un menú para seleccionar el rol: Coordinador o Rector. Cada rol tendrá acceso a sus funcionalidades correspondientes.
+```
+### Ejemplo de registro de estudiante
 
-Ejemplo de registro de estudiante
-bash
-Copiar código
+```bash
 Ingrese nombre del estudiante: Juan Pérez
 Ingrese grado del estudiante: 5
 ✅ Estudiante 'Juan Pérez' registrado exitosamente.
-Ejemplo de envío de aviso al rector
-bash
-Copiar código
+```
+
+### Ejemplo de envío de aviso al rector
+
+```bash
 Asunto del aviso: Reunión urgente
 Mensaje: Se requiere reunión con todos los profesores el viernes.
 ✅ Aviso enviado correctamente al rector.
-Ejemplo de generar reporte CSV
-bash
-Copiar código
+```
+
+### Ejemplo de generar reporte CSV
+
+```bash
 📊 Reporte CSV generado exitosamente en src/data/reportes/reporte_general.csv
-🛠️ Archivos principales
-text
-Copiar código
+```
+
+### 🛠️ Archivos principales
+
+```bash
 coordinador.py: Funciones para registrar, actualizar, eliminar estudiantes y profesores, enviar avisos y generar reportes.
 rector.py: Funciones para ver avisos, listados, generar reportes y gestionar comunicados.
 data_manager.py: Funciones auxiliares para leer y guardar archivos JSON.
 estudiantes.json, profesores.json, avisos.json, comunicados.json: Archivos que almacenan la información del sistema.
 reporte_general.csv: Archivo generado automáticamente con los datos de estudiantes y profesores.
-📝 Consideraciones
-text
+```
+
+### 📝 Consideraciones
+
+```bash
+- Todos los IDs son incrementales y únicos.
+- Los archivos JSON se crean automáticamente si no existen.
+- El sistema está pensado para ser ejecutado en consola.
+- Los reportes CSV se generan en src/data/reportes/.
+```
+### Ejemplo de registro de estudiante
+
+```bash
+Ingrese nombre del estudiante: Juan Pérez
 Copiar código
+Asunto del aviso: Reunión urgente
+Mensaje: Se requiere reunión con todos los profesores el viernes.
+✅ Aviso enviado correctamente al rector.
+✅ Estudiante 'Juan Pérez' registrado exitosamente.
+```
+### Ejemplo de envío de aviso al rector
+
+```bash
+Asunto del aviso: Reunión urgente
+Mensaje: Se requiere reunión con todos los profesores el viernes.
+✅ Aviso enviado correctamente al rector.
+```
+### 🛠️ Archivos principales
+
+```bash
+coordinador.py: Funciones para registrar, actualizar, eliminar estudiantes y profesores, enviar avisos y generar reportes.
+rector.py: Funciones para ver avisos, listados, generar reportes y gestionar comunicados.
+data_manager.py: Funciones auxiliares para leer y guardar archivos JSON.
+estudiantes.json, profesores.json, avisos.json, comunicados.json: Archivos que almacenan la información del sistema.
+reporte_general.csv: Archivo generado automáticamente con los datos de estudiantes y profesores.
+```
+```bash     
+coordinador.py: Funciones para registrar, actualizar, eliminar estudiantes y profesores, enviar avisos y generar reportes.
+rector.py: Funciones para ver avisos, listados, generar reportes y gestionar comunicados.
+data_manager.py: Funciones auxiliares para leer y guardar archivos JSON.
+estudiantes.json, profesores.json, avisos.json, comunicados.json: Archivos que almacenan la información del sistema.
+reporte_general.csv: Archivo generado automáticamente con los datos de estudiantes y profesores.
+```
+### 📝 Consideraciones
 - Todos los IDs son incrementales y únicos.
 - Los archivos JSON se crean automáticamente si no existen.
 - El sistema está pensado para ser ejecutado en consola.
