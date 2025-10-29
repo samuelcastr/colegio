@@ -8,5 +8,10 @@
     "rol": "coordinador",
     "usuario": "coor1",
     "contraseña": "abcd"
+  },
+  {
+    "rol": "profesor",
+    "usuario": "prof1",
+    "contraseña": "p201"
   }
 ]
