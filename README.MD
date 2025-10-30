@@ -1,12 +1,28 @@
-## 📂 Estructura del Proyecto.
+# 📚 Sistema de Gestión Académica del Colegio
 
-La estructura del proyecto está organizada de la siguiente manera para facilitar el desarrollo y mantenimiento del sistema de gestión escolar:
+**Categoría:** Misional — *Formación Académica* 
 
-> [!IMPORTANT]
-> esto es provicional
+**Versión de Python:** 3.13.9  
+
+## 🚫 Problema / Necesidad
+En muchos colegios, los docentes y directivos aún registran las calificaciones de manera manual o en hojas de cálculo, lo que puede generar errores, pérdida de información o dificultad para calcular promedios y hacer seguimiento académico a los estudiantes.
+
+Por esta razón, se propone crear un sistema académico que facilite el **registro de estudiantes, notas y el cálculo de promedios**, para apoyar la labor educativa y administrativa de la institución.
 
 
-```plaintext
+
+## 💡 Solución Propuesta
+El sistema desarrollado es una **aplicación de consola** que permite gestionar los procesos académicos de forma organizada.  
+Cuenta con distintos **roles de usuario**:
+- **Rector:** supervisa el sistema general.  
+- **Coordinador:** gestiona el registro de estudiantes.  
+- **Profesor:** ingresa las notas y calcula promedios.
+- **Estudiante:** ver notas y dtos.
+
+
+
+##  🔧 Arquitectura del Proyecto
+```
 colegio-sistema/
 ├─ src/
 │  ├─ main.py                     # Punto de entrada con menú o CLI
@@ -27,6 +43,11 @@ colegio-sistema/
 │  └─ data/
 │     ├─ usuarios.json            # Base de datos simulada
 │     ├─ solicitudes.json         # Casos o peticiones
+│     ├─ profesores.json          # Profesores
+|     ├─ notas.json               # Guarda notas
+|     ├─ estudiantes.json         # Estudiantes
+|     ├─ comunicados.json         # Mensaje, fecha
+|     ├─ avisos.json              # Aviso
 │     └─ reportes/
 │        └─ reporte_general.csv   # Salidas generadas
 ├─ tests/                         # (opcional) pruebas simples
@@ -34,13 +55,44 @@ colegio-sistema/
 ├─ README.md
 └─ .gitignore
 
-
 ```
 
-## ⚙️ Funcionalidades
 
+## 📘 Manual de Usuario
+**Requisitos previos**
+- Tener Python 3.11.2 o superior instalado.
+- (Opcional) Crear y activar un entorno virtual:
+  
+  python -m venv venv
+  venv\Scripts\activate
+  
+**Instalación**
+- Descargar o clonar el proyecto desde GitHub.
+- (Opcional) Instalar las librerías necesarias:
+  
+  pip install -r requirements.txt
+
+**Ejecución**
+- python -m src.main
+- python src/main.py
+
+
+
+##  👩🏽‍💻 Temas de Python aplicados
+- Funciones y modularización
+- Estructuras de datos (listas, diccionarios)
+- Manejo de archivos JSON
+- Importación de módulos
+- Condicionales y bucles
+- Programación por roles y permisos
+
+
+
+##  👩🏻‍🤝‍👩🏼 Trabajo Colaborativo
+**Integrantes:**
+
+- Samuel Castro — *Rol:* 
 ### Coordinador
-
 1. **Registrar estudiante**  
    Permite agregar un estudiante con `nombre` y `grado`.
 
@@ -69,6 +121,7 @@ colegio-sistema/
 
 ---
 
+- Saira Aragon — *Rol:*
 ### Rector
 
 1. **Ver avisos de coordinadores**  
@@ -93,14 +146,47 @@ colegio-sistema/
 
 ---
 
-## 📄 Ejemplo de uso
+- Angelica Garcia — *Rol:*
+### Profesor
 
-### Ejecutar el sistema
+1. **Iniciar sesión**  
+   Inicia sesión como usuario profesor con su respectiva contraseña.
+
+2. **Mensajes de bienvenida**  
+   Bienvenido rol profesor.
+
+3. **Registra notas**  
+   Ingresa notas de estudiante po su ID.
+
+4. **Ver notas**  
+   Puede ver las notas de sus estudiantes por su ID.
+
+5. **Listado de notas**  
+   Se observa una tabla con nombre de estudiante, materia, nota y fecha..
+
+6. **Calcular promedio**  
+   Se calcula el promedio de cada estudiante por sus respectivas notas.
+
+7. **Cerrar sesión**
+
+---
+
+- Karen Gonzales — *Rol:*
+  
+---
+
+**Repositorio**
+- https://github.com/samuelcastr/colegio.git
 
 
-### 📄 Ejemplo de uso
 
-#### Ejecutar el sistema
+## 🔮 Límites y mejoras futuras
+- Implementar autenticación segura (encriptar contraseñas).
+- Agregar reportes automáticos (PDF).
+- Integrar una interfaz gráfica o versión web.
+- Permitir filtrar promedios por materia o grado.
+
+## 📸 Ejemplos de uso
 
 ```bash
 python src/main.py
@@ -179,8 +265,3 @@ data_manager.py: Funciones auxiliares para leer y guardar archivos JSON.
 estudiantes.json, profesores.json, avisos.json, comunicados.json: Archivos que almacenan la información del sistema.
 reporte_general.csv: Archivo generado automáticamente con los datos de estudiantes y profesores.
 ```
-### 📝 Consideraciones
-- Todos los IDs son incrementales y únicos.
-- Los archivos JSON se crean automáticamente si no existen.
-- El sistema está pensado para ser ejecutado en consola.
-- Los reportes CSV se generan en src/data/reportes/.
