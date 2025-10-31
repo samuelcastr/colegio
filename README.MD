@@ -141,8 +141,14 @@ colegio-sistema/
 
 6. **Actualizar comunicado**  
    Permite modificar el asunto o el mensaje de un comunicado existente.
+7. **Ver estadísticas del colegio:** 
+   muestra cantidad de estudiantes, profesores y comunicados activos.  
+8.  **Eliminar comunicados:** 
+   marca un comunicado como inactivo (sin borrar el registro).  
+9.  **Eliminar estudiantes o profesores:** 
+   permite marcar registros como inactivos para mantener el historial.   
 
-7. **Cerrar sesión**
+10. **Cerrar sesión**
 
 ---
 
