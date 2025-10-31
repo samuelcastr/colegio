@@ -177,9 +177,34 @@ colegio-sistema/
 
 ---
 
-- Karen Gonzales — *Rol:*
-  
+- Karen Gonzales — *Rol: Estudiante *
+1. **Iniciar sesión**  
+   Inicia sesión como usuario *estudiante* con su respectiva contraseña registrada en `usuarios.json`.
+
+2. **Mensaje de bienvenida**  
+   El sistema muestra un mensaje de acceso exitoso indicando el rol *estudiante*.
+
+3. **Ver mis datos**  
+   Permite consultar la información personal del estudiante, incluyendo:  
+   - ID  
+   - Nombre  
+   - Grado  
+
+4. **Ver mis notas**  
+   Muestra todas las calificaciones registradas del estudiante con:  
+   - Materia  
+   - Nota  
+   - Fecha de registro  
+   Además, calcula y presenta el **promedio general**.
+
+5. **Mensajes de alerta**  
+   Si el ID no existe o el estudiante no tiene notas, se muestran mensajes informativos para orientar al usuario.
+
+6. **Cerrar sesión**  
+   Finaliza la sesión del estudiante y permite volver al inicio de sesión.
+
 ---
+  
 
 **Repositorio**
 - https://github.com/samuelcastr/colegio.git
