@@ -25,6 +25,11 @@ def registrar_nota():
         print("❌ No se encontró estudiante con ese ID.\n")
         return
 
+    grado = input("Ingrese el grado del estudiante: ").strip()
+    if not grado.isdigit():
+        print("⚠️ El grado debe ser un número.\n")
+        return
+
     materia = input("Ingrese materia: ").strip()
     nota = input("Ingrese nota (0-5): ").strip()
 
@@ -40,14 +45,16 @@ def registrar_nota():
         "id": _next_id(notas),
         "id_estudiante": estudiante["id"],
         "nombre_estudiante": estudiante["nombre"],
+        "grado": int(grado),
         "materia": materia,
         "nota": nota,
-        "fecha": datetime.now().strftime("%Y-%m-%d")  
+        "fecha": datetime.now().strftime("%Y-%m-%d")
     }
 
     notas.append(nueva_nota)
     save_json(NOTAS_FILE, notas)
-    print(f" ✅ Nota registrada correctamente para {estudiante['nombre']}.\n")
+    print(f"✅ Nota registrada correctamente para {estudiante['nombre']} (Grado {grado}).\n")
+
 
 def ver_notas():
     notas = load_json(NOTAS_FILE)
@@ -57,7 +64,7 @@ def ver_notas():
 
     print("\n📘 --- LISTADO DE NOTAS ---")
     for n in notas:
-        print(f"{n['nombre_estudiante']} | {n['materia']} = {n['nota']}  ({n['fecha']})")
+        print(f"{n['nombre_estudiante']} | {n['materia']} | Grado: {n['grado']} = {n['nota']}  ({n['fecha']})")
 
 
 def calcular_promedio():
@@ -74,7 +81,7 @@ def calcular_promedio():
         return
 
     promedio = sum(n["nota"] for n in notas_est) / len(notas_est)
-    print(f"\n📊 Promedio de {notas_est[0]['nombre_estudiante']}: {promedio:.2f}\n")
+    print(f"\n📊 Promedio de {notas_est[0]['nombre_estudiante']} (Grado: {notas_est[0]['grado']}): {promedio:.2f}\n")
 
 
 def menu_profesor():
@@ -99,7 +106,6 @@ def menu_profesor():
             break
         else:
             print("🚫 Opción no válida, intente nuevamente.\n")
-
 
 
 def _next_id(items):

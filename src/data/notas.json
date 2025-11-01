@@ -4,7 +4,53 @@
     "id_estudiante": 1,
     "nombre_estudiante": "andres",
     "materia": "ingles",
+    "grado": "11",
     "nota": 5.0,
     "fecha": "2025-10-29"
+  },
+  {
+    "id": 2,
+    "id_estudiante": 3,
+    "nombre_estudiante": "camila",
+    "materia": "Lenguaje",
+    "grado": "11",
+    "nota": 3.0,
+    "fecha": "2025-10-31"
+  },
+  {
+    "id": 3,
+    "id_estudiante": 3,
+    "nombre_estudiante": "camila",
+    "grado": 11,
+    "materia": "Lenguaje",
+    "nota": 3.0,
+    "fecha": "2025-10-31"
+  },
+  {
+    "id": 4,
+    "id_estudiante": 4,
+    "nombre_estudiante": "estu1",
+    "grado": 11,
+    "materia": "Lenguaje",
+    "nota": 2.0,
+    "fecha": "2025-10-31"
+  },
+  {
+    "id": 5,
+    "id_estudiante": 3,
+    "nombre_estudiante": "camila",
+    "grado": 11,
+    "materia": "Lenguaje",
+    "nota": 3.0,
+    "fecha": "2025-10-31"
+  },
+  {
+    "id": 6,
+    "id_estudiante": 1,
+    "nombre_estudiante": "andres",
+    "grado": 11,
+    "materia": "Ingles",
+    "nota": 4.0,
+    "fecha": "2025-10-31"
   }
 ]

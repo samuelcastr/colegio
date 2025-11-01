@@ -162,7 +162,10 @@ colegio-sistema/
    Bienvenido rol profesor.
 
 3. **Registra notas**  
-   Ingresa notas de estudiante po su ID.
+   - Ingresa nombre de estudiante por si ID.
+   - Grado.
+   - Materia.
+   - Nota(0-5).
 
 4. **Ver notas**  
    Puede ver las notas de sus estudiantes por su ID.
@@ -223,6 +226,7 @@ colegio-sistema/
 python src/main.py
 Se presentará un menú para seleccionar el rol: Coordinador o Rector. Cada rol tendrá acceso a sus funcionalidades correspondientes.
 ```
+
 ### Ejemplo de registro de estudiante
 
 ```bash
@@ -245,24 +249,6 @@ Mensaje: Se requiere reunión con todos los profesores el viernes.
 📊 Reporte CSV generado exitosamente en src/data/reportes/reporte_general.csv
 ```
 
-### 🛠️ Archivos principales
-
-```bash
-coordinador.py: Funciones para registrar, actualizar, eliminar estudiantes y profesores, enviar avisos y generar reportes.
-rector.py: Funciones para ver avisos, listados, generar reportes y gestionar comunicados.
-data_manager.py: Funciones auxiliares para leer y guardar archivos JSON.
-estudiantes.json, profesores.json, avisos.json, comunicados.json: Archivos que almacenan la información del sistema.
-reporte_general.csv: Archivo generado automáticamente con los datos de estudiantes y profesores.
-```
-
-### 📝 Consideraciones
-
-```bash
-- Todos los IDs son incrementales y únicos.
-- Los archivos JSON se crean automáticamente si no existen.
-- El sistema está pensado para ser ejecutado en consola.
-- Los reportes CSV se generan en src/data/reportes/.
-```
 ### Ejemplo de registro de estudiante
 
 ```bash
@@ -273,23 +259,68 @@ Mensaje: Se requiere reunión con todos los profesores el viernes.
 ✅ Aviso enviado correctamente al rector.
 ✅ Estudiante 'Juan Pérez' registrado exitosamente.
 ```
-### Ejemplo de envío de aviso al rector
+
+### Ejemplo de registro de Profesor
 
 ```bash
-Asunto del aviso: Reunión urgente
-Mensaje: Se requiere reunión con todos los profesores el viernes.
-✅ Aviso enviado correctamente al rector.
+=== SISTEMA DE GESTION DEL COLEGIO ===
+Ingrese su nombre de usuario: Prof1
+Ingrese su contraseña: p201
+
+✅ Bienvenido, prof1 (rol: profesor)
 ```
+
+```bash
+=== MENÚ DEL PROFESOR ===
+1. Registrar nota
+2. Ver notas
+3. Calcular promedio
+4. Cerrar sesión
+
+Seleccione una opción: 1
+
+=== REGISTRAR NOTA ===
+ID:1 | Andrés - Grado: 11
+ID:2 | Camila - Grado: 10
+ID:3 | Estu1 - Grado: 11
+
+Ingrese el ID del estudiante: 1
+Ingrese el grado del estudiante: 11
+Ingrese materia: Inglés
+Ingrese nota (0-5): 4
+
+✅ Nota registrada correctamente para Andrés (Grado 11).
+
+
+=== MENÚ DEL PROFESOR ===
+1. Registrar nota
+2. Ver notas
+3. Calcular promedio
+4. Cerrar sesión
+
+Seleccione una opción: 2
+
+📘 --- LISTADO DE NOTAS ---
+Andrés | Inglés | Grado: 11 = 4.0  (2025-10-31)
+Camila | Lenguaje | Grado: 10 = 3.5  (2025-10-30)
+Estu1  | Matemáticas | Grado: 11 = 4.2  (2025-10-31)
+
+
+Seleccione una opción: 3
+Ingrese el ID del estudiante: 1
+
+📊 Promedio de Andrés (Grado: 11): 4.00
+```
+
+```bash
+Seleccione una opción: 4
+👋 Cerrando sesión del profesor...
+```
+
+
 ### 🛠️ Archivos principales
 
 ```bash
-coordinador.py: Funciones para registrar, actualizar, eliminar estudiantes y profesores, enviar avisos y generar reportes.
-rector.py: Funciones para ver avisos, listados, generar reportes y gestionar comunicados.
-data_manager.py: Funciones auxiliares para leer y guardar archivos JSON.
-estudiantes.json, profesores.json, avisos.json, comunicados.json: Archivos que almacenan la información del sistema.
-reporte_general.csv: Archivo generado automáticamente con los datos de estudiantes y profesores.
-```
-```bash     
 coordinador.py: Funciones para registrar, actualizar, eliminar estudiantes y profesores, enviar avisos y generar reportes.
 rector.py: Funciones para ver avisos, listados, generar reportes y gestionar comunicados.
 data_manager.py: Funciones auxiliares para leer y guardar archivos JSON.
